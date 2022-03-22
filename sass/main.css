@@ -22,7 +22,7 @@ h1 {
   margin-top: 100px;
 }
 
-.photographer_section article {
+.photographer-article {
   justify-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,14 +39,48 @@ h1 {
           flex-direction: column;
 }
 
-.photographer_section article h2 {
-  color: #d3573c;
-  font-size: 36px;
+.photographer-article__link {
+  text-decoration: none;
 }
 
-.photographer_section article img {
+.photographer-article__link--title {
+  color: #d3573c;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.photographer-article__link--img {
   height: 200px;
   width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #c4c4c4;
+  -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.photographer-article__descr {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.photographer-article__descr--location {
+  display: block;
+  color: #901c1c;
+}
+
+.photographer-article__descr--tagline {
+  display: block;
+}
+
+.photographer-article__descr--price {
+  display: block;
+  color: #525252;
 }
 
 #contact_modal {
@@ -57,6 +91,20 @@ h1 {
   background-color: #fafafa;
   height: 300px;
   margin: 0 100px;
+}
+
+.photograph-header__img {
+  height: 200px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #c4c4c4;
+  -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 header {
