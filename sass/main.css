@@ -220,4 +220,9 @@ form input {
   font-weight: normal;
   text-align: center;
 }
+
+.photo-article img {
+  width: 200px;
+  height: 200px;
+}
 /*# sourceMappingURL=main.css.map */

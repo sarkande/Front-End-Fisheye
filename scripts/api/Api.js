@@ -24,20 +24,7 @@ class Api {
     }
 
     async getPhotographers() {
-        return await this.get().then(res => res.photographers)
+        return await this.get().then(res => [res.photographers, res.media])
     }
 }
 
-class PhotoApi extends Api {
-    /**
-     * 
-     * @param {string} url 
-     */
-    constructor(url) {
-        super(url)
-    }
-
-    async getPhotos() {
-        return await this.get().then(res => res.media)
-    }
-}
