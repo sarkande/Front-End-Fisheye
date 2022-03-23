@@ -1,7 +1,7 @@
 class App {
      constructor(query){
           this.$photographersWrapper = document.querySelector(query)
-          this.photographerApi = new PhotographerApi('/data/photographers.json');
+          this.photographerApi = new PhotographerApi('./data/photographers.json');
      }
 
      async main() {
