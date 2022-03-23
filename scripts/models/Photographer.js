@@ -1,3 +1,8 @@
+ /*
+Serialize data of json about photographer
+
+*/
+
 class Photographer{
      constructor(data){
           this._name = data.name

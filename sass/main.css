@@ -221,8 +221,33 @@ form input {
   text-align: center;
 }
 
+.photo-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.photo-article {
+  margin: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+}
+
 .photo-article img {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.photo-article h2 {
+  text-align: center;
+  color: #901c1c;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,8 @@
+/*
+Base of the website, load data from json and display them using templates
+*/
+
+
 class App {
      constructor(query){
           this.$photographersWrapper = document.querySelector(query)

@@ -1,3 +1,9 @@
+/*
+TEMPLATE To display details about photos and videos
+
+*/
+
+
 class PhotoCard {
      constructor(photo){
           this._photo = photo;
@@ -9,7 +15,8 @@ class PhotoCard {
 
           const photoCard =`
                <article class="photo-article">
-                    <img src="assets/photographers_data/${folder}/${this._photo.media}">PHOTO
+                    <img src="assets/photographers_data/${folder}/${this._photo.media}">
+                    <h2>${this._photo.title}</h2>
                </article>
           `;
           $wrapper.innerHTML = photoCard;

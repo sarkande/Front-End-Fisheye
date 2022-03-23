@@ -1,3 +1,9 @@
+ /*
+Class about api, make request to get information from json
+
+*/
+
+
 class Api {
      /**
       * @param {string} url 

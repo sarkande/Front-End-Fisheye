@@ -1,3 +1,8 @@
+ /*
+Serialize data about photo and videos from the json
+
+*/
+
 class Photo{
      constructor(data){
           this._id = data.id

@@ -1,3 +1,8 @@
+/*
+TEMPLATE To display details about photographers
+
+*/
+
 class PhotographerCard {
      constructor(photographer){
           this._photographer = photographer;

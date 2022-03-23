@@ -1,6 +1,22 @@
+.photo-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
 .photo-article {
+	margin: 20px;
+	flex: 1 100%;
 	img {
-		width: 200px;
-		height: 200px;
+		width: 350px;
+		height: 350px;
+		display: block;
+		object-fit: cover;
+		margin: auto;
+		text-align: center;
+		border-radius: 5px;
+	}
+	h2 {
+		text-align: center;
+		color: $color-tertiary;
 	}
 }
