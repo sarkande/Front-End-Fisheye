@@ -58,12 +58,33 @@
 	background-color: #fafafa;
 	height: 300px;
 	margin: 0 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-right: 50px;
+	margin-left: 50px;
+
+	&__title {
+		color: $color-primary;
+	}
+	&__descr {
+		&--location {
+			display: block;
+			color: $color-tertiary;
+			font-size: 1.5em;
+		}
+		&--tagline {
+			display: block;
+			margin-top: 10px;
+			color: $color-secondary;
+		}
+	}
 	&__img {
 		height: 200px;
 		width: 200px;
 		object-fit: cover;
 		border-radius: 100%;
-		display: block;
+
 		margin-left: auto;
 		margin-right: auto;
 		background: #c4c4c4;

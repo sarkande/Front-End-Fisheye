@@ -10,14 +10,12 @@ class PhotoCard {
      }
 
      createPhotoCard(folder){
-          const $wrapper = document.createElement('div')
-          $wrapper.classList.add('photo-card-wrapper')
+          const $wrapper = document.createElement('figure')
+          $wrapper.classList.add('photo')
 
           const photoCard =`
-               <article class="photo-article">
-                    <img src="assets/photographers_data/${folder}/${this._photo.media}">
-                    <h2>${this._photo.title}</h2>
-               </article>
+               <img src="assets/photographers_data/${folder}/${this._photo.image}">
+               <figcaption>${this._photo.title} ${this._photo.likes} ❤</figcaption>
           `;
           $wrapper.innerHTML = photoCard;
           return $wrapper; 

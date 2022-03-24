@@ -91,6 +91,33 @@ h1 {
   background-color: #fafafa;
   height: 300px;
   margin: 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.photograph-header__title {
+  color: #d3573c;
+}
+
+.photograph-header__descr--location {
+  display: block;
+  color: #901c1c;
+  font-size: 1.5em;
+}
+
+.photograph-header__descr--tagline {
+  display: block;
+  margin-top: 10px;
+  color: #525252;
 }
 
 .photograph-header__img {
@@ -99,7 +126,6 @@ h1 {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 100%;
-  display: block;
   margin-left: auto;
   margin-right: auto;
   background: #c4c4c4;
@@ -221,21 +247,20 @@ form input {
   text-align: center;
 }
 
-.photo-content {
+.photograph-content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 100px;
+  margin-top: 50px;
 }
 
-.photo-article {
-  margin: 20px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 100%;
-          flex: 1 100%;
+.photo {
+  width: 350px;
 }
 
-.photo-article img {
+.photo img {
   width: 350px;
   height: 350px;
   display: block;
@@ -246,8 +271,7 @@ form input {
   border-radius: 5px;
 }
 
-.photo-article h2 {
-  text-align: center;
+.photo figcaption {
   color: #901c1c;
 }
 /*# sourceMappingURL=main.css.map */

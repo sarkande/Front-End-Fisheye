@@ -1,11 +1,13 @@
-.photo-content {
+.photograph-content {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	margin-left: 100px;
+	margin-top: 50px;
 }
 
-.photo-article {
-	margin: 20px;
-	flex: 1 100%;
+.photo {
+	width: 350px;
+
 	img {
 		width: 350px;
 		height: 350px;
@@ -15,8 +17,7 @@
 		text-align: center;
 		border-radius: 5px;
 	}
-	h2 {
-		text-align: center;
+	figcaption {
 		color: $color-tertiary;
 	}
 }
