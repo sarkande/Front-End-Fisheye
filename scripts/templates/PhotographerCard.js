@@ -38,10 +38,12 @@ class PhotographerCard {
                          <span class="photograph-header__descr--tagline">${this._photographer.tagline}</span>
                     </p>
                </div>
-
-               <button class="btn" onclick="displayModal()">Contactez-moi</button>
-
-               <img class="photograph-header__img" alt="${this._photographer.name}" src="${this._photographer.portrait}">
+               <div class="photograph-header-container-button">
+                    <button class="btn" onclick="displayModal()">Contactez-moi</button>
+               </div>
+               <div class="photograph-header-container-img">
+                    <img class="photograph-header__img" alt="${this._photographer.name}" src="${this._photographer.portrait}">
+               </div>
 
           `;
           $wrapper.innerHTML = photographerCard;

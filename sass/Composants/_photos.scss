@@ -3,9 +3,13 @@
 	flex-wrap: wrap;
 	margin-left: 100px;
 	margin-top: 50px;
+
 	&__search {
 		width: 100%;
 
+		.btn-list-box {
+			transform: scaleY(0);
+		}
 		button {
 			width: 150px;
 			height: 40px;
@@ -14,6 +18,7 @@
 			color: white;
 			border: none;
 			text-align: left;
+			font-weight: bold;
 			i {
 				position: relative;
 				left: 50px;
@@ -22,7 +27,6 @@
 				}
 			}
 			&:hover {
-				background-color: $background-secondary;
 				cursor: pointer;
 			}
 
@@ -41,13 +45,11 @@
 						$background-primary 95% 100%
 					)
 					1 stretch;
-				transform: scaleY(0);
 			}
 			&.photograph-content__search-container--title {
 				border-top: 1px;
-				border-color: blue;
+
 				border-radius: 0px 0px 3px 3px;
-				transform: scaleY(0);
 			}
 		}
 		&-container {
@@ -59,10 +61,6 @@
 				& > .photograph-content__search-container--fame {
 					border-radius: 3px 3px 0px 0px;
 				}
-			}
-			&:hover > button {
-				display: block;
-				transform: scaleY(1);
 				i.fa-chevron-up {
 					display: inline;
 				}
@@ -70,10 +68,15 @@
 					display: none;
 				}
 			}
+			&:hover .btn-list-box {
+				display: block;
+				transform: scaleY(1);
+			}
 		}
 		&--title {
-			width: 80px;
+			width: 85px;
 			position: relative;
+			display: inline-block;
 			bottom: 80px;
 			font-weight: bold;
 		}

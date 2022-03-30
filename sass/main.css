@@ -104,6 +104,10 @@ h1 {
   margin-left: 50px;
 }
 
+.photograph-header > div {
+  margin: 50px;
+}
+
 .photograph-header__title {
   color: #d3573c;
 }
@@ -261,6 +265,11 @@ form input {
   width: 100%;
 }
 
+.photograph-content__search .btn-list-box {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
 .photograph-content__search button {
   width: 150px;
   height: 40px;
@@ -269,6 +278,7 @@ form input {
   color: white;
   border: none;
   text-align: left;
+  font-weight: bold;
 }
 
 .photograph-content__search button i {
@@ -281,7 +291,6 @@ form input {
 }
 
 .photograph-content__search button:hover {
-  background-color: #d3573c;
   cursor: pointer;
 }
 
@@ -295,16 +304,11 @@ form input {
   -o-border-image: linear-gradient(to right, #901c1c 0% 5%, #f1f1f1 5%, #f1f1f1 95%, #901c1c 95% 100%) 1 stretch;
      border-image: -webkit-gradient(linear, left top, right top, from(#901c1c), color-stop(5%, #f1f1f1), color-stop(95%, #f1f1f1), color-stop(95%, #901c1c)) 1 stretch;
      border-image: linear-gradient(to right, #901c1c 0% 5%, #f1f1f1 5%, #f1f1f1 95%, #901c1c 95% 100%) 1 stretch;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
 }
 
 .photograph-content__search button.photograph-content__search-container--title {
   border-top: 1px;
-  border-color: blue;
   border-radius: 0px 0px 3px 3px;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
 }
 
 .photograph-content__search-container {
@@ -321,23 +325,24 @@ form input {
   border-radius: 3px 3px 0px 0px;
 }
 
-.photograph-content__search-container:hover > button {
+.photograph-content__search-container:hover i.fa-chevron-up {
+  display: inline;
+}
+
+.photograph-content__search-container:hover i.fa-chevron-down {
+  display: none;
+}
+
+.photograph-content__search-container:hover .btn-list-box {
   display: block;
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
 }
 
-.photograph-content__search-container:hover > button i.fa-chevron-up {
-  display: inline;
-}
-
-.photograph-content__search-container:hover > button i.fa-chevron-down {
-  display: none;
-}
-
 .photograph-content__search--title {
-  width: 80px;
+  width: 85px;
   position: relative;
+  display: inline-block;
   bottom: 80px;
   font-weight: bold;
 }
