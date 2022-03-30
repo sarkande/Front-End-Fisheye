@@ -248,12 +248,98 @@ form input {
 }
 
 .photograph-content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: 100px;
   margin-top: 50px;
+}
+
+.photograph-content__search {
+  width: 100%;
+}
+
+.photograph-content__search button {
+  width: 150px;
+  height: 40px;
+  display: block;
+  background-color: #901c1c;
+  color: white;
+  border: none;
+  text-align: left;
+}
+
+.photograph-content__search button i {
+  position: relative;
+  left: 50px;
+}
+
+.photograph-content__search button i.fa-chevron-up {
+  display: none;
+}
+
+.photograph-content__search button:hover {
+  background-color: #d3573c;
+  cursor: pointer;
+}
+
+.photograph-content__search button.photograph-content__search-container--fame {
+  border-radius: 3px 3px 3px 3px;
+}
+
+.photograph-content__search button.photograph-content__search-container--date {
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
+  -o-border-image: linear-gradient(to right, #901c1c 0% 5%, #f1f1f1 5%, #f1f1f1 95%, #901c1c 95% 100%) 1 stretch;
+     border-image: -webkit-gradient(linear, left top, right top, from(#901c1c), color-stop(5%, #f1f1f1), color-stop(95%, #f1f1f1), color-stop(95%, #901c1c)) 1 stretch;
+     border-image: linear-gradient(to right, #901c1c 0% 5%, #f1f1f1 5%, #f1f1f1 95%, #901c1c 95% 100%) 1 stretch;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.photograph-content__search button.photograph-content__search-container--title {
+  border-top: 1px;
+  border-color: blue;
+  border-radius: 0px 0px 3px 3px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.photograph-content__search-container {
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+}
+
+.photograph-content__search-container:hover {
+  height: 120px;
+}
+
+.photograph-content__search-container:hover > .photograph-content__search-container--fame {
+  border-radius: 3px 3px 0px 0px;
+}
+
+.photograph-content__search-container:hover > button {
+  display: block;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.photograph-content__search-container:hover > button i.fa-chevron-up {
+  display: inline;
+}
+
+.photograph-content__search-container:hover > button i.fa-chevron-down {
+  display: none;
+}
+
+.photograph-content__search--title {
+  width: 80px;
+  position: relative;
+  bottom: 80px;
+  font-weight: bold;
 }
 
 .photo {

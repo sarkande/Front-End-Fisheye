@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <link rel="icon" type="image/png" href="assets/favicon.png">
         <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Fisheye - photographe</title>
     </head>
     <body>
@@ -15,7 +16,20 @@
         </header>
         <main id="main">
             <section class="photograph-header"></section>
-            <section class="photograph-content"></section>
+            <section class="photograph-content">
+                <div class="photograph-content__search">
+                    <span class="photograph-content__search--title">Trier par</span>
+                    <div class="photograph-content__search-container">
+                        <button class="photograph-content__search-container--fame">
+                            Popularité
+                            <i class="fa fa-chevron-down"></i>
+                            <i class="fa fa-chevron-up"></i>
+                        </button>
+                        <button class="photograph-content__search-container--date">Date</button>
+                        <button class="photograph-content__search-container--title">Titre</button>
+                    </div>
+                </div>
+            </section>
         </main>
         <div id="contact_modal">
             <div class="modal">
