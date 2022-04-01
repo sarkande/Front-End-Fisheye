@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <link href="sass/main.css" rel="stylesheet" type="text/css">
         <meta charset="utf-8">
@@ -9,9 +9,9 @@
         <title>Fisheye - photographe</title>
     </head>
     <body>
-        <header role="banner">
+        <header>
             <a href="index.html">
-                <img src="assets/images/logo.png" class="logo">
+                <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page">
             </a>
         </header>
         <main id="main">
@@ -33,11 +33,23 @@
                 </div>
             </section>
         </main>
+        <div id="like-contain">
+            <p>
+                <span class="like__counter">25</span>
+                ❤
+            </p>
+            <p>
+                <span class="like__price">300</span>
+                € / jour
+            </p>
+        </div>
         <div id="contact_modal">
             <div class="modal">
                 <header>
                     <h2>Contactez-moi</h2>
-                    <img src="assets/icons/close.svg" onclick="closeModal()">
+                    <button aria-label="Close Contact form">
+                        <img src="assets/icons/close.svg" onclick="closeModal()">
+                    </button>
                 </header>
                 <form>
                     <div>
@@ -50,7 +62,7 @@
                         <label for="message">Votre message</label>
                         <textarea id="message"></textarea>
                     </div>
-                    <button class="btn">Envoyer</button>
+                    <button class="btn" aria-label="Send">Envoyer</button>
                 </form>
             </div>
         </div>

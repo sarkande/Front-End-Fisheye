@@ -83,10 +83,6 @@ h1 {
   color: #525252;
 }
 
-#contact_modal {
-  display: none;
-}
-
 .photograph-header {
   background-color: #fafafa;
   height: 300px;
@@ -251,6 +247,13 @@ form input {
   text-align: center;
 }
 
+#contact_modal {
+  display: none;
+  position: fixed;
+  width: 1100px;
+  top: 0px;
+}
+
 .photograph-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,8 +293,10 @@ form input {
   display: none;
 }
 
-.photograph-content__search button:hover {
+.photograph-content__search button:hover, .photograph-content__search button:focus {
   cursor: pointer;
+  color: black;
+  background-color: #d3573c;
 }
 
 .photograph-content__search button.photograph-content__search-container--fame {
@@ -364,5 +369,9 @@ form input {
 
 .photo figcaption {
   color: #901c1c;
+}
+
+#like-contain {
+  background-color: #d3573c;
 }
 /*# sourceMappingURL=main.css.map */

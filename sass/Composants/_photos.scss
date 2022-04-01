@@ -26,8 +26,11 @@
 					display: none;
 				}
 			}
-			&:hover {
+			&:hover,
+			&:focus {
 				cursor: pointer;
+				color: $color-btn;
+				background-color: $background-secondary;
 			}
 
 			&.photograph-content__search-container--fame {
