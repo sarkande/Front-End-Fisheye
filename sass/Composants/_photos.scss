@@ -1,9 +1,10 @@
 .photograph-content {
-	display: flex;
-	flex-wrap: wrap;
 	margin-left: 100px;
 	margin-top: 50px;
-
+	&__medias {
+		display: flex;
+		flex-wrap: wrap;
+	}
 	&__search {
 		width: 100%;
 

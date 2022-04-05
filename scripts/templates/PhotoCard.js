@@ -15,7 +15,7 @@ class PhotoCard {
 
           const photoCard =`
                <img src="assets/photographers_data/${folder}/${this._media.image}">
-               <figcaption><span class="photo__descr">${this._media.title} ${this._media.likes}</span> <span class="photo__like">❤</span></figcaption>
+               <figcaption><span class="photo__descr">${this._media.title}</span> <span class="photo__like">${this._media.likes} ❤</span></figcaption>
           `;
           $wrapper.innerHTML = photoCard;
           return $wrapper; 
@@ -26,7 +26,7 @@ class PhotoCard {
 
           const videoCard =`
                <video src="assets/photographers_data/${folder}/${this._media.video}"></video>
-               <figcaption><span class="photo__descr">${this._media.title} ${this._media.likes}</span> <span class="photo__like">❤</span></figcaption>
+               <figcaption><span class="photo__descr">${this._media.title} </span> <span class="photo__like">${this._media.likes} ❤</span></figcaption>
           `;
           $wrapper.innerHTML = videoCard;
           return $wrapper; 
