@@ -98,7 +98,36 @@
 		text-align: center;
 		border-radius: 5px;
 	}
+
 	figcaption {
 		color: $color-tertiary;
+		display: flex;
+		justify-content: space-between;
+		.photo__like {
+			cursor: pointer;
+		}
+	}
+}
+
+.video {
+	width: 350px;
+
+	video {
+		width: 350px;
+		height: 350px;
+		display: block;
+		object-fit: cover;
+		margin: auto;
+		text-align: center;
+		border-radius: 5px;
+	}
+
+	figcaption {
+		color: $color-tertiary;
+		display: flex;
+		justify-content: space-between;
+		.photo__like {
+			cursor: pointer;
+		}
 	}
 }

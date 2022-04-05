@@ -23,8 +23,11 @@ class App {
      async photos() {
           const idPhotographer = Number(new URL(window.location.href).searchParams.get("id"));
           const $wrapperPhoto = document.querySelector('.photograph-content');
+          const $wrapperLike = document.querySelector('.like__counter');
+          const $wrapperPrice = document.querySelector('.like__price');
           const photographers = await this.photographerApi.getPhotographers();
           let folderPhotographer ='';
+          let nbLikes = 0;
 
 
           photographers[0]
@@ -34,11 +37,11 @@ class App {
                     const Template = new PhotographerCard(photographer);
                     Template.createPhotographerDetail()
                     folderPhotographer = photographer.name.split(' ')[0].replace('-', ' ');
+                    $wrapperPrice.innerHTML = photographer.price;
                }
           })
           photographers[1]
           .map(media=>{
-               console.log(media);
                if(media.image !== undefined)
                     return new PhotosFactory(media, 'photo');
                else if(media.video !== undefined)
@@ -49,20 +52,29 @@ class App {
           })
           .forEach(media => {
                if(media.photographerId === idPhotographer){
-                    console.log(media);
+                    nbLikes += media.likes;
                     if(media.video !== undefined){
                          //video
+                         const Template = new PhotoCard(media);
+                         $wrapperPhoto.appendChild(Template.createVideoCard(folderPhotographer));
                     }
                     else {
                          //photo
                          const Template = new PhotoCard(media);
                          $wrapperPhoto.appendChild(Template.createPhotoCard(folderPhotographer));
                     }
-
-
                }
           })
 
+          $wrapperLike.innerHTML = nbLikes;
+          var $wrapperPhotoLike = document.querySelectorAll(".photo__like");
+          for (let i = 0; i < $wrapperPhotoLike.length; i++) {
+               $wrapperPhotoLike[i].addEventListener('click', function(){
+                    this.classList.toggle("liked");
+                    nbLikes= this.classList.contains('liked') ? nbLikes+1:nbLikes-1;
+                    $wrapperLike.innerHTML = nbLikes;
+               })
+          }
           
      }
 

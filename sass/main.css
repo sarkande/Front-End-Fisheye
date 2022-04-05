@@ -369,9 +369,61 @@ form input {
 
 .photo figcaption {
   color: #901c1c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.photo figcaption .photo__like {
+  cursor: pointer;
+}
+
+.video {
+  width: 350px;
+}
+
+.video video {
+  width: 350px;
+  height: 350px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.video figcaption {
+  color: #901c1c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.video figcaption .photo__like {
+  cursor: pointer;
 }
 
 #like-contain {
   background-color: #d3573c;
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 3px 3px 0px 0px;
 }
 /*# sourceMappingURL=main.css.map */
