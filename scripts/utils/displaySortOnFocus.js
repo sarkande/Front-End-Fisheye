@@ -1,32 +1,32 @@
-var btnFame    = document.querySelector(".photograph-content__search-container--fame");
-var btnDate    = document.querySelector(".photograph-content__search-container--date");
-var btnTitle   = document.querySelector(".photograph-content__search-container--title");
+var btnFame    = document.querySelector('.photograph-content__search-container--fame');
+var btnDate    = document.querySelector('.photograph-content__search-container--date');
+var btnTitle   = document.querySelector('.photograph-content__search-container--title');
 
-var containerBtn = document.querySelector(".btn-list-box");
+var containerBtn = document.querySelector('.btn-list-box');
 
-var chevronUp = document.querySelector("i.fa-chevron-up");
-var chevronDown =document.querySelector("i.fa-chevron-down"); 
+var chevronUp = document.querySelector('i.fa-chevron-up');
+var chevronDown =document.querySelector('i.fa-chevron-down'); 
 
-btnFame.addEventListener('focus', (event) => {    
+btnFame.addEventListener('focus', () => {    
      displayOnfocus();
 });
 
-btnDate.addEventListener('focus', (event) => {
+btnDate.addEventListener('focus', () => {
      displayOnfocus();
 });
 
 
-btnTitle.addEventListener('focus', (event) => {
+btnTitle.addEventListener('focus', () => {
      displayOnfocus();
 });
 
-btnFame.addEventListener('focusout', (event) => {
+btnFame.addEventListener('focusout', () => {
      hideFocusOut();
 });
-btnDate.addEventListener('focusout', (event) => {
+btnDate.addEventListener('focusout', () => {
      hideFocusOut();
 });
-btnTitle.addEventListener('focusout', (event) => {
+btnTitle.addEventListener('focusout', () => {
      hideFocusOut();
 });
 

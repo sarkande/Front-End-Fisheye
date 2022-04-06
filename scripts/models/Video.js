@@ -3,15 +3,15 @@ Serialize data about photo and videos from the json
 
 */
 
-class Video{
+class Video{// eslint-disable-line no-unused-vars
      constructor(data){
-          this._id = data.id
-          this._photographerId = data.photographerId
-          this._title = data.title
-          this._video = data.video
-          this._likes = data.likes
-          this._date = data.date
-          this._price = data.price
+          this._id = data.id;
+          this._photographerId = data.photographerId;
+          this._title = data.title;
+          this._video = data.video;
+          this._likes = data.likes;
+          this._date = data.date;
+          this._price = data.price;
      }
 
      get id(){

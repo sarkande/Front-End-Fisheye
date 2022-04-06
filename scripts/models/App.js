@@ -1,12 +1,13 @@
 /*
 Base of the website, load data from json and display them using templates
 */
+/*global PhotographerApi, Photographer,PhotographerCard,PhotosFactory, PhotoCard */
+/*eslint no-undef: "error"*/
 
-
-class App {
+class App {// eslint-disable-line no-unused-vars
      
      constructor(query){
-          this.$photographersWrapper = document.querySelector(query)
+          this.$photographersWrapper = document.querySelector(query);
           this.photographerApi = new PhotographerApi('./data/photographers.json');
           this._folderPhotographer ='';
      }
@@ -18,12 +19,12 @@ class App {
           .map(photographer=>new Photographer(photographer))
           .forEach(photographer => {
                const Template = new PhotographerCard(photographer);
-               this.$photographersWrapper.appendChild(Template.createPhotographerCard())
-          })    
+               this.$photographersWrapper.appendChild(Template.createPhotographerCard());
+          });
      }
 
      async loadMedias() {
-          const idPhotographer = Number(new URL(window.location.href).searchParams.get("id"));
+          const idPhotographer = Number(new URL(window.location.href).searchParams.get('id'));
           const photographers = await this.photographerApi.getPhotographers();      
 
           this.instantiatePhotographer(photographers, idPhotographer);
@@ -37,12 +38,13 @@ class App {
                else
                     throw 'Problem, neither image nor video';
           
-          })
+          });
           return data;
      }
 
      async instantiatePhotographer(photographers, idPhotographer) {
           const $wrapperPrice = document.querySelector('.like__price');
+          const $wrapperName = document.querySelector('.modal__name');
           photographers[0]
                .map(photographer => new Photographer(photographer))
                .forEach(photographer => {
@@ -51,12 +53,14 @@ class App {
                          Template.createPhotographerDetail();
                          this._folderPhotographer = photographer.name.split(' ')[0].replace('-', ' ');
                          $wrapperPrice.innerHTML = photographer.price;
+                         $wrapperName.innerHTML = photographer.name;
+
                     }
                });
      }
 
      sortByFame(medias){
-          this.render(medias.sort((a1, a2) => {a2.likes - a1.likes}))
+          this.render(medias.sort((a1, a2) => {a2.likes - a1.likes;}));
      }
      sortByDate(medias){
           this.render(medias.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()));
@@ -69,7 +73,7 @@ class App {
      async render(medias){
           const $wrapperPhoto = document.querySelector('.photograph-content__medias');
           const $wrapperLike = document.querySelector('.like__counter');
-          const idPhotographer = Number(new URL(window.location.href).searchParams.get("id"));
+          const idPhotographer = Number(new URL(window.location.href).searchParams.get('id'));
           $wrapperPhoto.innerHTML='';
           let nbLikes = 0;
           medias.forEach(media => {
@@ -86,7 +90,7 @@ class App {
                          $wrapperPhoto.appendChild(Template.createPhotoCard(this._folderPhotographer));
                     }
                }
-          })
+          });
           $wrapperLike.innerHTML = nbLikes;
 
 
