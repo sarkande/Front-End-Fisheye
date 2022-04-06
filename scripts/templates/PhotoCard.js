@@ -14,7 +14,7 @@ class PhotoCard {
           $wrapper.classList.add('photo')
 
           const photoCard =`
-               <img src="assets/photographers_data/${folder}/${this._media.image}">
+               <img class="figure--media" src="assets/photographers_data/${folder}/${this._media.image}">
                <figcaption><span class="photo__descr">${this._media.title}</span> <span class="photo__like">${this._media.likes} ❤</span></figcaption>
           `;
           $wrapper.innerHTML = photoCard;
@@ -25,7 +25,7 @@ class PhotoCard {
           $wrapper.classList.add('video')
 
           const videoCard =`
-               <video src="assets/photographers_data/${folder}/${this._media.video}"></video>
+               <video class="figure--media" src="assets/photographers_data/${folder}/${this._media.video}"></video>
                <figcaption><span class="photo__descr">${this._media.title} </span> <span class="photo__like">${this._media.likes} ❤</span></figcaption>
           `;
           $wrapper.innerHTML = videoCard;

@@ -429,4 +429,67 @@ form input {
   padding-left: 10px;
   border-radius: 3px 3px 0px 0px;
 }
+
+#lightbox {
+  left: calc((50vw - 50%) * -1);
+  top: calc((50vh - 50%) * -1);
+  -webkit-transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+          transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: none;
+}
+
+#lightbox .lightbox__container {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+}
+
+#lightbox .lightbox__container--img, #lightbox .lightbox__container--video {
+  width: 600px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+#lightbox .btn-left,
+#lightbox .btn-right,
+#lightbox .btn-close {
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+}
+
+#lightbox .btn-left i,
+#lightbox .btn-right i,
+#lightbox .btn-close i {
+  color: #901c1c;
+}
+
+#lightbox .btn-left {
+  left: 20%;
+  top: 47%;
+}
+
+#lightbox .btn-right {
+  right: 20%;
+  top: 47%;
+}
+
+#lightbox .btn-close {
+  top: 7%;
+  right: 25%;
+}
 /*# sourceMappingURL=main.css.map */

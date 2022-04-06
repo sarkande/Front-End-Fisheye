@@ -45,56 +45,60 @@
             </p>
         </div>
         <div id="lightbox">
-            <button aria-label="Close Contact form">
-                <img src="assets/icons/close.svg" onclick="closeModal()">
+            <button aria-label="Close Contact form" class="btn-close">
+                <i class="fa fa-close"></i>
             </button>
-            <a>
+            <button class="btn-left">
                 <i class="fa fa-chevron-left"></i>
-            </a>
-            <a>
-                <i class="fa fa-chevron-right"></i>
-            </a>
-            <p>titre</p>
-        </div>
-        <div id="contact_modal">
-            <div class="modal">
-                <header>
-                    <h2>Contactez-moi</h2>
-                    <button aria-label="Close Contact form">
-                        <img src="assets/icons/close.svg" onclick="closeModal()">
-                    </button>
-                </header>
-                <form>
-                    <div>
-                        <label for="firstname">Prénom</label>
-                        <input id="firstname" type="text">
-                        <label for="lastname">Nom</label>
-                        <input id="lastname" type="text">
-                        <label for="mail">Email</label>
-                        <input id="mail" type="email">
-                        <label for="message">Votre message</label>
-                        <textarea id="message"></textarea>
-                    </div>
-                    <button class="btn" aria-label="Send">Envoyer</button>
-                </form>
+            </button>
+            <div class="lightbox__container">
+                <img class="lightbox__container--img" src="">
+                <video class="lightbox__container--video" src="">
+                    <p>titre</p>
+                </div>
+                <button class="btn-right">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
             </div>
-        </div>
-        <script src="./scripts/utils/contactForm.js"></script>
-        <!-- Models -->
-        <script src="./scripts/models/Photographer.js"></script>
-        <script src="./scripts/models/Photo.js"></script>
-        <script src="./scripts/models/Video.js"></script>
-        <script src="./scripts/models/App.js"></script>
-        <!-- Factory -->
-        <script src="./scripts/factories/PhotosFactory.js"></script>
-        <!-- Templates -->
-        <script src="./scripts/templates/PhotographerCard.js"></script>
-        <script src="./scripts/templates/PhotoCard.js"></script>
-        <!-- Api -->
-        <script src="./scripts/api/Api.js"></script>
-        <!-- Entry point -->
-        <script src="./scripts/pages/photographerPage.js"></script>
-        <script src="./scripts/utils/displaySortOnFocus.js"></script>
-        <script src="./scripts/utils/likeOnClick.js"></script>
-    </body>
-</html>
+            <div id="contact_modal">
+                <div class="modal">
+                    <header>
+                        <h2>Contactez-moi</h2>
+                        <button aria-label="Close Contact form">
+                            <img src="assets/icons/close.svg" onclick="closeModal()">
+                        </button>
+                    </header>
+                    <form>
+                        <div>
+                            <label for="firstname">Prénom</label>
+                            <input id="firstname" type="text">
+                            <label for="lastname">Nom</label>
+                            <input id="lastname" type="text">
+                            <label for="mail">Email</label>
+                            <input id="mail" type="email">
+                            <label for="message">Votre message</label>
+                            <textarea id="message"></textarea>
+                        </div>
+                        <button class="btn" aria-label="Send">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+            <script src="./scripts/utils/contactForm.js"></script>
+            <!-- Models -->
+            <script src="./scripts/models/Photographer.js"></script>
+            <script src="./scripts/models/Photo.js"></script>
+            <script src="./scripts/models/Video.js"></script>
+            <script src="./scripts/models/App.js"></script>
+            <!-- Factory -->
+            <script src="./scripts/factories/PhotosFactory.js"></script>
+            <!-- Templates -->
+            <script src="./scripts/templates/PhotographerCard.js"></script>
+            <script src="./scripts/templates/PhotoCard.js"></script>
+            <!-- Api -->
+            <script src="./scripts/api/Api.js"></script>
+            <!-- Entry point -->
+            <script src="./scripts/pages/photographerPage.js"></script>
+            <script src="./scripts/utils/displaySortOnFocus.js"></script>
+            <script src="./scripts/utils/lightbox.js"></script>
+        </body>
+    </html>

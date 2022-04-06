@@ -6,9 +6,9 @@ Relative to the page photographer
  const app = new App('.photograph-header')
  app.loadMedias().then((media)=>{
      app.render(media);
- }).then(addLikeForEachMedia);
+ }).then(addLikeForEachMedia).then(addLightBox);
 
- document.querySelector('.photograph-content__search-container--fame').addEventListener('click', function(){
+document.querySelector('.photograph-content__search-container--fame').addEventListener('click', function(){
       app.loadMedias().then((media)=>{
            app.sortByFame(media);
       }).then(addLikeForEachMedia);
@@ -39,4 +39,62 @@ document.querySelector('.photograph-content__search-container--title').addEventL
                $wrapperLike.innerHTML = nbLikes;
           })
      }
+ }
+
+ function addLightBox(){
+
+     var allFigures = document.querySelectorAll('.figure--media');
+     var currentIndex = 0;
+     for (let i = 0; i < allFigures.length; i++) {
+          const element = allFigures[i];
+          element.addEventListener('click', function(){
+               displayElement(i);
+               //p
+               currentIndex = i;
+               document.querySelector("#lightbox").style.display ="flex";
+          });
+     }
+     //construct arrow
+     document.querySelector('.btn-left').addEventListener('click', function(){
+          currentIndex--;
+          if(currentIndex<0)
+               currentIndex = allFigures.length-1;
+          displayElement(currentIndex);
+     })
+     document.querySelector('.btn-right').addEventListener('click', function(){
+          currentIndex++;
+          if(currentIndex>=allFigures.length)
+               currentIndex = 0;
+          displayElement(currentIndex);
+     })
+     closeLightBox();
+
+
+ }
+ function displayElement(index){
+     var allFigures = document.querySelectorAll('figure');
+     const element = allFigures[index];
+
+     if(element.className =='video'){
+          document.querySelector(".lightbox__container--img").style.display ="none";
+          document.querySelector(".lightbox__container--video").style.display ="block";
+          document.querySelector(".lightbox__container--video").src = element.getElementsByTagName('video')[0].src;
+          document.querySelector(".lightbox__container--video").play();
+     }         
+     else if(element.className == 'photo'){
+          document.querySelector(".lightbox__container--img").style.display ="block";
+          document.querySelector(".lightbox__container--video").style.display ="none";
+          document.querySelector(".lightbox__container--img").src = element.getElementsByTagName('img')[0].src;
+     }
+
+ }
+
+ function closeLightBox(){
+     var closeButton = document.querySelector('.btn-close')
+     
+     closeButton.addEventListener('click', function(){
+          document.querySelector(".lightbox__container--video").style.display ="none"; 
+          document.querySelector(".lightbox__container--img").style.display ="none"; 
+          document.querySelector("#lightbox").style.display ="none"; 
+     })
  }

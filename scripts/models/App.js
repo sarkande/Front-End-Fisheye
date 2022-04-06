@@ -72,7 +72,6 @@ class App {
           const idPhotographer = Number(new URL(window.location.href).searchParams.get("id"));
           $wrapperPhoto.innerHTML='';
           let nbLikes = 0;
-          console.log(medias);
           medias.forEach(media => {
                if(media.photographerId === idPhotographer){
                     nbLikes += media.likes;
@@ -89,6 +88,8 @@ class App {
                }
           })
           $wrapperLike.innerHTML = nbLikes;
+
+
      }
 
 
