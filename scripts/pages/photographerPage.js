@@ -11,18 +11,18 @@ Relative to the page photographer
 document.querySelector('.photograph-content__search-container--fame').addEventListener('click', function(){
       app.loadMedias().then((media)=>{
            app.sortByFame(media);
-      }).then(addLikeForEachMedia);
+      }).then(addLikeForEachMedia).then(addLightBox);
 
 })
 document.querySelector('.photograph-content__search-container--date').addEventListener('click', function(){
      app.loadMedias().then((media)=>{
           app.sortByDate(media);
-     }).then(addLikeForEachMedia);
+     }).then(addLikeForEachMedia).then(addLightBox);
 })
 document.querySelector('.photograph-content__search-container--title').addEventListener('click', function(){
      app.loadMedias().then((media)=>{
           app.sortByTitle(media);
-     }).then(addLikeForEachMedia);
+     }).then(addLikeForEachMedia).then(addLightBox);
 })
 
 
@@ -52,6 +52,14 @@ document.querySelector('.photograph-content__search-container--title').addEventL
                currentIndex = i;
                document.querySelector("#lightbox").style.display ="flex";
           });
+          element.addEventListener('keypress', function(e){
+               if(e.key === 'Enter'){
+                    displayElement(i);
+                    currentIndex = i;
+                    document.querySelector("#lightbox").style.display ="flex";
+               }
+
+          });
      }
      //construct arrow
      document.querySelector('.btn-left').addEventListener('click', function(){
@@ -60,12 +68,30 @@ document.querySelector('.photograph-content__search-container--title').addEventL
                currentIndex = allFigures.length-1;
           displayElement(currentIndex);
      })
+
+     document.addEventListener('keydown', function(e){
+          if(e.key === 'ArrowLeft'){
+               currentIndex--;
+               if(currentIndex<0)
+                    currentIndex = allFigures.length-1;
+               displayElement(currentIndex);
+          }
+          if(e.key === 'ArrowRight'){
+               currentIndex++;
+               if(currentIndex>=allFigures.length)
+                    currentIndex = 0;
+               displayElement(currentIndex);
+          }
+     });
+
      document.querySelector('.btn-right').addEventListener('click', function(){
           currentIndex++;
           if(currentIndex>=allFigures.length)
                currentIndex = 0;
           displayElement(currentIndex);
      })
+
+
      closeLightBox();
 
 
@@ -84,6 +110,7 @@ document.querySelector('.photograph-content__search-container--title').addEventL
           document.querySelector(".lightbox__container--img").style.display ="block";
           document.querySelector(".lightbox__container--video").style.display ="none";
           document.querySelector(".lightbox__container--img").src = element.getElementsByTagName('img')[0].src;
+          document.querySelector(".lightbox__container--img").alt = element.getElementsByTagName('img')[0].alt;
      }
      document.querySelector(".lightbox__container--title").innerHTML = element.getElementsByClassName('photo__descr')[0].innerHTML;
  }
@@ -96,4 +123,13 @@ document.querySelector('.photograph-content__search-container--title').addEventL
           document.querySelector(".lightbox__container--img").style.display ="none"; 
           document.querySelector("#lightbox").style.display ="none"; 
      })
+
+     document.addEventListener('keydown', function(e){
+          if(e.key === "Escape"){
+               document.querySelector(".lightbox__container--video").style.display ="none"; 
+               document.querySelector(".lightbox__container--img").style.display ="none"; 
+               document.querySelector("#lightbox").style.display ="none"; 
+          }
+     })
+
  }

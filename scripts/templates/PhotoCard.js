@@ -14,7 +14,7 @@ class PhotoCard {
           $wrapper.classList.add('photo')
 
           const photoCard =`
-               <img class="figure--media" src="assets/photographers_data/${folder}/${this._media.image}">
+               <img class="figure--media" src="assets/photographers_data/${folder}/${this._media.image}" tabindex="0" alt="${this._media.title}">
                <figcaption><span class="photo__descr">${this._media.title}</span> <span class="photo__like">${this._media.likes} ❤</span></figcaption>
           `;
           $wrapper.innerHTML = photoCard;

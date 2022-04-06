@@ -48,15 +48,15 @@
             <button aria-label="Close Contact form" class="btn-close">
                 <i class="fa fa-close"></i>
             </button>
-            <button class="btn-left">
+            <button class="btn-left" aria-label="precedent">
                 <i class="fa fa-chevron-left"></i>
             </button>
             <div class="lightbox__container">
-                <img class="lightbox__container--img" src="">
+                <img class="lightbox__container--img" src="" alt="">
                 <video class="lightbox__container--video" src=""></video>
                 <p class="lightbox__container--title">titre</p>
             </div>
-            <button class="btn-right">
+            <button class="btn-right" aria-label="suivant">
                 <i class="fa fa-chevron-right"></i>
             </button>
         </div>
@@ -64,11 +64,11 @@
             <div class="modal">
                 <header>
                     <h2>Contactez-moi</h2>
-                    <button aria-label="Close Contact form">
-                        <img src="assets/icons/close.svg" onclick="closeModal()">
+                    <button aria-label="Close Contact form" onclick="closeModal()">
+                        <i class="fa fa-close"></i>
                     </button>
                 </header>
-                <form>
+                <form action="." method="get">
                     <div>
                         <label for="firstname">Prénom</label>
                         <input id="firstname" type="text">
