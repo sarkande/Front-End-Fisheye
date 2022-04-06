@@ -460,6 +460,10 @@ form input {
   border-radius: 5px;
 }
 
+#lightbox .lightbox__container--title {
+  color: #901c1c;
+}
+
 #lightbox .btn-left,
 #lightbox .btn-right,
 #lightbox .btn-close {

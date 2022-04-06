@@ -49,7 +49,6 @@ document.querySelector('.photograph-content__search-container--title').addEventL
           const element = allFigures[i];
           element.addEventListener('click', function(){
                displayElement(i);
-               //p
                currentIndex = i;
                document.querySelector("#lightbox").style.display ="flex";
           });
@@ -86,7 +85,7 @@ document.querySelector('.photograph-content__search-container--title').addEventL
           document.querySelector(".lightbox__container--video").style.display ="none";
           document.querySelector(".lightbox__container--img").src = element.getElementsByTagName('img')[0].src;
      }
-
+     document.querySelector(".lightbox__container--title").innerHTML = element.getElementsByClassName('photo__descr')[0].innerHTML;
  }
 
  function closeLightBox(){

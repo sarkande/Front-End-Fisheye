@@ -26,6 +26,9 @@
 			object-fit: cover;
 			border-radius: 5px;
 		}
+		&--title {
+			color: $color-tertiary;
+		}
 	}
 
 	.btn-left,
