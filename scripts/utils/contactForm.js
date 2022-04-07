@@ -16,3 +16,12 @@ document.addEventListener('keydown', function(e){
         closeModal();
     }
 });
+
+document.querySelector('form').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    var inputs = document.querySelectorAll('form input');
+    inputs.forEach(element => {
+        console.log(element.value);
+    });
+});

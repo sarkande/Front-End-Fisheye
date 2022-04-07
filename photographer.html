@@ -20,14 +20,25 @@
                 <div class="photograph-content__search">
                     <span class="photograph-content__search--title">Trier par</span>
                     <div class="photograph-content__search-container">
-                        <button class="photograph-content__search-container--fame">
+                        <button
+                            class="photograph-content__search-container--fame"
+                            aria-label="Order By Fame"
+                            role="button"
+                            aria-haspopup="listbox"
+                            aria-expanded
+                        >
                             Popularité
                             <i class="fa fa-chevron-down"></i>
                             <i class="fa fa-chevron-up"></i>
                         </button>
-                        <div class="btn-list-box">
-                            <button class="photograph-content__search-container--date">Date</button>
-                            <button class="photograph-content__search-container--title">Titre</button>
+                        <div
+                            class="btn-list-box"
+                            role="listbox"
+                            aria-activedescendant
+                            aria-selected
+                        >
+                            <button class="photograph-content__search-container--date" aria-label="Order By Date">Date</button>
+                            <button class="photograph-content__search-container--title" aria-label="Order By Title">Titre</button>
                         </div>
                     </div>
                 </div>
@@ -44,19 +55,19 @@
                 € / jour
             </p>
         </div>
-        <div id="lightbox">
-            <button aria-label="Close Contact form" class="btn-close">
+        <div id="lightbox" aria-label="image closeup view">
+            <button aria-label="Close dialog" class="btn-close">
                 <i class="fa fa-close"></i>
             </button>
-            <button class="btn-left" aria-label="precedent">
+            <button class="btn-left" aria-label="Previous image">
                 <i class="fa fa-chevron-left"></i>
             </button>
             <div class="lightbox__container">
-                <img class="lightbox__container--img" src="none" alt="">
-                <video class="lightbox__container--video" src="none"></video>
+                <img class="lightbox__container--img" src="assets/photographers_data/account.png" alt="">
+                <video class="lightbox__container--video" src="assets/photographers_data/account.png"></video>
                 <p class="lightbox__container--title">titre</p>
             </div>
-            <button class="btn-right" aria-label="suivant">
+            <button class="btn-right" aria-label="Next image">
                 <i class="fa fa-chevron-right"></i>
             </button>
         </div>
@@ -75,13 +86,13 @@
                 <form action="." method="get">
                     <div>
                         <label for="firstname">Prénom</label>
-                        <input id="firstname" type="text">
+                        <input id="firstname" type="text" aria-labelledby="firstname">
                         <label for="lastname">Nom</label>
-                        <input id="lastname" type="text">
+                        <input id="lastname" type="text" aria-labelledby="lastname">
                         <label for="mail">Email</label>
-                        <input id="mail" type="email">
+                        <input id="mail" type="email" aria-labelledby="mail">
                         <label for="message">Votre message</label>
-                        <textarea id="message"></textarea>
+                        <textarea id="message" aria-labelledby="message"></textarea>
                     </div>
                     <button class="btn" aria-label="Send">Envoyer</button>
                 </form>
@@ -103,6 +114,5 @@
         <!-- Entry point -->
         <script src="./scripts/pages/photographerPage.js"></script>
         <script src="./scripts/utils/displaySortOnFocus.js"></script>
-        <script src="./scripts/utils/lightbox.js"></script>
     </body>
 </html>

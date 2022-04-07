@@ -45,6 +45,8 @@ class App {// eslint-disable-line no-unused-vars
      async instantiatePhotographer(photographers, idPhotographer) {
           const $wrapperPrice = document.querySelector('.like__price');
           const $wrapperName = document.querySelector('.modal__name');
+          const $wrapperModal = document.querySelector('#contact_modal');
+
           photographers[0]
                .map(photographer => new Photographer(photographer))
                .forEach(photographer => {
@@ -54,7 +56,7 @@ class App {// eslint-disable-line no-unused-vars
                          this._folderPhotographer = photographer.name.split(' ')[0].replace('-', ' ');
                          $wrapperPrice.innerHTML = photographer.price;
                          $wrapperName.innerHTML = photographer.name;
-
+                         $wrapperModal.ariaLabel= 'Contact me ' + photographer.name;
                     }
                });
      }

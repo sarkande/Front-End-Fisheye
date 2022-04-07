@@ -39,7 +39,7 @@ class PhotographerCard {// eslint-disable-line no-unused-vars
                     </p>
                </div>
                <div class='photograph-header-container-button'>
-                    <button class='btn' onclick='displayModal()'>Contactez-moi</button>
+                    <button class='btn' aria-label="Contact me" onclick='displayModal()'>Contactez-moi</button>
                </div>
                <div class='photograph-header-container-img'>
                     <img class='photograph-header__img' alt='${this._photographer.name}' src='${this._photographer.portrait}'>
