@@ -1,3 +1,8 @@
+
+/*
+Creation of events about the sort buttons
+*/
+
 var btnFame    = document.querySelector('.photograph-content__search-container--fame');
 var btnDate    = document.querySelector('.photograph-content__search-container--date');
 var btnTitle   = document.querySelector('.photograph-content__search-container--title');

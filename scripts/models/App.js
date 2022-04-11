@@ -11,7 +11,7 @@ class App {// eslint-disable-line no-unused-vars
           this.photographerApi = new PhotographerApi('./data/photographers.json');
           this._folderPhotographer ='';
      }
-
+     //base function, call when we need to display all the photographers
      async main() {
           const photographers = await this.photographerApi.getPhotographers();
           console.log(photographers);
@@ -22,7 +22,8 @@ class App {// eslint-disable-line no-unused-vars
                this.$photographersWrapper.appendChild(Template.createPhotographerCard());
           });
      }
-
+     // function call when we need to load  all the photos and videos of a specific photographer
+     // return an array of object 
      async loadMedias() {
           const idPhotographer = Number(new URL(window.location.href).searchParams.get('id'));
           const photographers = await this.photographerApi.getPhotographers();      
@@ -41,6 +42,7 @@ class App {// eslint-disable-line no-unused-vars
           });
           return data;
      }
+     // function display contact information about a photographer
 
      async instantiatePhotographer(photographers, idPhotographer) {
           const $wrapperPrice = document.querySelector('.like__price');
@@ -60,7 +62,7 @@ class App {// eslint-disable-line no-unused-vars
                     }
                });
      }
-
+     //sort
      sortByFame(medias){
           this.render(medias.sort((a1, a2) => {a2.likes - a1.likes;}));
      }
@@ -72,6 +74,7 @@ class App {// eslint-disable-line no-unused-vars
           this.render(medias.sort((a, b) => a.title.localeCompare(b.title)));
      }
 
+     // display photos on the wrapper
      async render(medias){
           const $wrapperPhoto = document.querySelector('.photograph-content__medias');
           const $wrapperLike = document.querySelector('.like__counter');

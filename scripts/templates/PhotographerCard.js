@@ -8,6 +8,7 @@ class PhotographerCard {// eslint-disable-line no-unused-vars
           this._photographer = photographer;
      }
 
+     //Create photographer card
      createPhotographerCard(){
           const $wrapper = document.createElement('div');
           $wrapper.classList.add('photographer-card-wrapper');
@@ -28,6 +29,8 @@ class PhotographerCard {// eslint-disable-line no-unused-vars
           $wrapper.innerHTML = photographerCard;
           return $wrapper; 
      }
+
+     //Create photographer details
      createPhotographerDetail(){
           const $wrapper = document.querySelector('.photograph-header');
           const photographerCard =`

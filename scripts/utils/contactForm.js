@@ -1,3 +1,8 @@
+/**
+ * Controls about the modals
+ * Event escape to close
+ */
+
 function displayModal() {// eslint-disable-line no-unused-vars
     const modal = document.getElementById('contact_modal');
 	modal.style.display = 'block';

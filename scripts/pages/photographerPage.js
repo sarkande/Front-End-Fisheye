@@ -28,6 +28,9 @@ document.querySelector('.photograph-content__search-container--title').addEventL
 });
 
 
+/*
+Add likes for each medias (photos and videos)
+*/
 function addLikeForEachMedia(){
      const $wrapperLike = document.querySelector('.like__counter');
      var $wrapperPhotoLike = document.querySelectorAll('.photo__like');
@@ -43,6 +46,9 @@ function addLikeForEachMedia(){
      }
 }
 
+/*
+Add lightBox event on each medias
+*/
 function addLightBox(){
 
      var allFigures = document.querySelectorAll('.figure--media');
@@ -64,6 +70,7 @@ function addLightBox(){
           });
      }
      //construct arrow
+     //Event keydown
      document.querySelector('.btn-left').addEventListener('click', function(){
           currentIndex--;
           if(currentIndex<0)
@@ -92,12 +99,12 @@ function addLightBox(){
                currentIndex = 0;
           displayElement(currentIndex);
      });
-
-
      closeLightBox();
-
-
 }
+
+/*
+     display the light box and fill with a media
+*/
 function displayElement(index){
      var allFigures = document.querySelectorAll('figure');
      const element = allFigures[index];
@@ -117,6 +124,9 @@ function displayElement(index){
      document.querySelector('.lightbox__container--title').innerHTML = element.getElementsByClassName('photo__descr')[0].innerHTML;
 }
 
+/*
+     Add event to close light box
+*/
 function closeLightBox(){
      var closeButton = document.querySelector('.btn-close');
      
