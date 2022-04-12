@@ -43,6 +43,14 @@ function addLikeForEachMedia(){
                nbLikes= this.classList.contains('liked') ? nbLikes+1:nbLikes-1;
                $wrapperLike.innerHTML = nbLikes;
           });
+          $wrapperPhotoLike[i].addEventListener('keydown', function(e){
+               if(e.key === 'Enter'){
+                    this.classList.toggle('liked');
+                    this.innerHTML=this.classList.contains('liked') ? parseInt(this.innerHTML.split(' ')[0]) +1 + ' ❤':  parseInt(this.innerHTML.split(' ')[0]) -1 +' ❤';
+                    nbLikes= this.classList.contains('liked') ? nbLikes+1:nbLikes-1;
+                    $wrapperLike.innerHTML = nbLikes;
+               }
+          });
      }
 }
 
