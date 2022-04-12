@@ -9,7 +9,7 @@ class Photo{// eslint-disable-line no-unused-vars
           this._photographerId = data.photographerId;
           this._title = data.title;
           this._image = data.image;
-          this._likes = data.likes;
+          this._likes = parseInt(data.likes);
           this._date = data.date;
           this._price = data.price;
      }
@@ -27,7 +27,7 @@ class Photo{// eslint-disable-line no-unused-vars
           return this._price;
      }
      get likes(){
-          return this._likes;
+          return parseInt(this._likes);
      }
      get date(){
           return this._date;

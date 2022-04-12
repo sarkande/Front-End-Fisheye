@@ -21,6 +21,17 @@ document.addEventListener('keydown', function(e){
         closeModal();
     }
 });
+// document.querySelector('.btn-send').addEventListener('keydown', function(e){
+//     if(e.key === 'Enter'){
+//         e.preventDefault();
+
+//         var inputs = document.querySelectorAll('form input');
+//         inputs.forEach(element => {
+//             console.log(element.value);
+//         });
+//     }
+
+// });
 
 document.querySelector('form').addEventListener('submit', function(e){
     e.preventDefault();

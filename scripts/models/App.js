@@ -64,7 +64,8 @@ class App {// eslint-disable-line no-unused-vars
      }
      //sort
      sortByFame(medias){
-          this.render(medias.sort((a1, a2) => {a2.likes - a1.likes;}));
+          console.log(medias);
+          this.render(medias.sort((a1, a2) => {return parseInt(a2._likes) - parseInt(a1._likes);}));
      }
      sortByDate(medias){
           this.render(medias.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()));

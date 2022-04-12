@@ -7,7 +7,7 @@ Relative to the page photographer
 
 const app = new App('.photograph-header');
 app.loadMedias().then((media)=>{
-     app.render(media);
+     app.sortByFame(media);
 }).then(addLikeForEachMedia).then(addLightBox);
 
 document.querySelector('.photograph-content__search-container--fame').addEventListener('click', function(){
